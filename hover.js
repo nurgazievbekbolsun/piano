@@ -1,6 +1,7 @@
 const block = document.querySelector('#board')
 const audio = document.querySelector('.audio')
-const  btn = document.querySelector('#myBtn')
+const  btn1 = document.querySelector('.btn1')
+const  btn2 = document.querySelector('.btn2')
 
 const colorNames = [
     "AliceBlue",
@@ -163,8 +164,13 @@ for (let a = 0;a < 304;a++){
     beka.addEventListener('mouseout',()=>{
         removeColor(beka)
         myFunction(audio.play())
-
     })
+btn1.addEventListener('click',()=>{
+    setColor(beka)
+})
+    btn2.addEventListener('click',()=>{
+    removeColor(beka)
+})
 }
 function setColor(a){
     let color = randomColor
